@@ -1,0 +1,80 @@
+{
+  "current": {
+    "colors_accent_1": "#80411e",
+    "social_twitter_link": "https:\/\/twitter.com",
+    "social_facebook_link": "https:\/\/facebook.com",
+    "social_pinterest_link": "https:\/\/pinterest.com",
+    "social_instagram_link": "http:\/\/instagram.com",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Coffee Time ☕",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_1.png",
+          "logo_width": 200,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "a08471c1-e260-46a3-9053-dbc56fde7567": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Navigation",
+              "menu": "main-menu"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
+          },
+          "4149a945-8cc5-4363-8a46-c0336b7228fc": {
+            "type": "text",
+            "settings": {
+              "heading": "Store Info",
+              "subtext": "<p>📍 4194 Mapleview Drive, 33607 FL<\/p><p>📞 727-955-3308<\/p><p>✉ hello@slatecoffee.com<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "a08471c1-e260-46a3-9053-dbc56fde7567",
+          "footer-0",
+          "4149a945-8cc5-4363-8a46-c0336b7228fc"
+        ],
+        "settings": {
+          "color_scheme": "accent-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Sign on up, dear coffee lovers! ❤",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}
