@@ -2,17 +2,54 @@
   "sections": {
     "main": {
       "type": "main-test-product",
+      "blocks": {
+        "e7197d5a-eb62-42b6-b76c-a3be0ac9b553": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "Tax is included"
+          }
+        },
+        "627bc16f-70d7-403c-810e-e7681953fcbb": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "Shipping will take around 10 days"
+          }
+        },
+        "17fc1cdf-7d11-4ac9-abdb-abbf5c2302b3": {
+          "type": "product_price_block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "e7197d5a-eb62-42b6-b76c-a3be0ac9b553",
+        "627bc16f-70d7-403c-810e-e7681953fcbb",
+        "17fc1cdf-7d11-4ac9-abdb-abbf5c2302b3"
+      ],
       "settings": {
-        "tax": "Tax is absolutely not included",
-        "shipping": "Ships in 3 days",
         "show_reviews": true
       }
     },
     "second": {
       "type": "main-test-product",
+      "blocks": {
+        "cae7866d-e121-4e62-976f-668af3a53b29": {
+          "type": "tax_notice_block",
+          "settings": {
+            "tax_notice_text": "Tax is not included"
+          }
+        },
+        "8f56849b-3b41-49a5-a863-e486b46ba392": {
+          "type": "shipping_notice_block",
+          "settings": {
+            "shipping_notice_text": "Shipping will take around 5 days"
+          }
+        }
+      },
+      "block_order": [
+        "cae7866d-e121-4e62-976f-668af3a53b29",
+        "8f56849b-3b41-49a5-a863-e486b46ba392"
+      ],
       "settings": {
-        "tax": "Tax is absolutely included",
-        "shipping": "Ships in 99 days",
         "show_reviews": false
       }
     },

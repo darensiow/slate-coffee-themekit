@@ -77,8 +77,6 @@
       "main-test-product": {
         "type": "main-test-product",
         "settings": {
-          "tax": "Tax included",
-          "shipping": "Ships in 9 days",
           "show_reviews": true
         }
       }
