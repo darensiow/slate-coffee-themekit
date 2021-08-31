@@ -1,0 +1,106 @@
+<!--Link to slick CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="{{ 'testimonial.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="testimonial-slider">
+{% for block in section.blocks %}
+  
+    <div class="testimonial-card">
+      <div class="testimonial-icon">
+        {% render 'icon-quotation-mark' %}
+      </div>
+      <div class="testimonial-text">
+        {{ block.settings.testimonial_text }}
+      </div>
+      <div class="testimonial-image">
+        <img src={{ block.settings.testimonial_reviewer | img_url: '300x' }}>
+      </div>
+      <div class="testimonial-name">{{ block.settings.testimonial_name }}</div>
+    </div>
+  
+{% endfor %}
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.testimonial-slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 989,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  });
+</script>  
+
+{% schema %}
+{
+  "name": "Testimonial Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Testimonial slide",
+      "type": "testimonial_slide",
+      "settings": [
+        {
+          "id": "testimonial_text",
+          "type": "richtext",
+          "label": "Enter testimonial text" 
+        },
+        {
+          "id": "testimonial_reviewer",
+          "type": "image_picker",
+          "label": "Upload image of reviewer" 
+        },
+        {
+          "id": "testimonial_name",
+          "type": "text",
+          "label": "Enter name of reviewer" 
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "blocks": [
+        {
+          "type": "testimonial_slide"
+        },
+        {
+          "type": "testimonial_slide"
+        },
+        {
+          "type": "testimonial_slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

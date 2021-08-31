@@ -1,0 +1,41 @@
+.testimonial-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  width: 350px;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:focus {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-icon svg {
+  width: 15%;
+  max-height: 30px;
+}
+
+.testimonial-text {
+  padding: 15px 0px;
+}
+
+.testimonial-name {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.testimonial-image img {
+  max-width: 40%;
+  border-radius: 50%;
+  padding: 15px 0;
+  /* Because slick turns images from inline to block, hence we center the image as such */
+  margin: 0 auto;
+}
+
+.slick-arrow::before {
+  color: lightgrey !important;
+}

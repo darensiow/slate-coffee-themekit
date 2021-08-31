@@ -145,6 +145,59 @@
         "desktop_layout": "left",
         "mobile_layout": "collage"
       }
+    },
+    "163041254759081e88": {
+      "type": "testimonial",
+      "blocks": {
+        "163041254759081e88-0": {
+          "type": "testimonial_slide",
+          "settings": {
+            "testimonial_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "testimonial_reviewer": "shopify:\/\/shop_images\/jane.reviewer.jpg",
+            "testimonial_name": "Jane Wilcox"
+          }
+        },
+        "163041254759081e88-1": {
+          "type": "testimonial_slide",
+          "settings": {
+            "testimonial_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "testimonial_reviewer": "shopify:\/\/shop_images\/matt_reviewer.jpg",
+            "testimonial_name": "Matt Davis"
+          }
+        },
+        "163041254759081e88-2": {
+          "type": "testimonial_slide",
+          "settings": {
+            "testimonial_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "testimonial_reviewer": "shopify:\/\/shop_images\/kriti_reviewer.jpg",
+            "testimonial_name": "Kriti Kakria"
+          }
+        },
+        "fe230395-d443-4406-8a02-aff3b037e5b8": {
+          "type": "testimonial_slide",
+          "settings": {
+            "testimonial_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "testimonial_reviewer": "shopify:\/\/shop_images\/owen_reviewer.jpg",
+            "testimonial_name": "Owen Sharp"
+          }
+        },
+        "c2547ed6-e45b-4600-af50-e5b28eff4d12": {
+          "type": "testimonial_slide",
+          "settings": {
+            "testimonial_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+            "testimonial_reviewer": "shopify:\/\/shop_images\/vanessa_reviewer.jpg",
+            "testimonial_name": "Vanessa Foy"
+          }
+        }
+      },
+      "block_order": [
+        "163041254759081e88-0",
+        "163041254759081e88-1",
+        "163041254759081e88-2",
+        "fe230395-d443-4406-8a02-aff3b037e5b8",
+        "c2547ed6-e45b-4600-af50-e5b28eff4d12"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -153,6 +206,7 @@
     "163011839090be2191",
     "image_text",
     "16301192645a37c504",
-    "163011926723bd8794"
+    "163011926723bd8794",
+    "163041254759081e88"
   ]
 }
