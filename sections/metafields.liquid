@@ -1,0 +1,50 @@
+JUST PLAIN
+<br>
+
+text:
+{{ product.metafields.my_fields.test_text}}
+<br>
+URL:
+{{ product.metafields.my_fields.test_url}}
+<br>
+Reference:
+{{ product.metafields.my_fields.test_reference}}
+<br>
+Rating:
+{{ product.metafields.my_fields.test_rating}}
+<br>
+Number:
+{{ product.metafields.my_fields.test_number}}
+<br>
+Measurement:
+{{ product.metafields.my_fields.test_measurement}}
+<br>
+Json:
+{{ product.metafields.my_fields.test_json}}
+<br>
+Image File:
+{{ product.metafields.my_fields.test_image_file | metafield_text }}
+<br>
+Boolean:
+{{ product.metafields.my_fields.test_boolean}}
+<br>
+Date:
+{{ product.metafields.my_fields.test_date}}
+<br>
+Color:
+{{ product.metafields.my_fields.test_color}}
+<br>
+
+
+{% schema %}
+{
+  "name": "metafields section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "metafields section"
+    }
+  ]
+
+}
+{% endschema %}
