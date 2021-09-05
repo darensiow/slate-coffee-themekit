@@ -135,34 +135,28 @@
                     <td>Taste</td>
                     <td>{{ block.settings.taste }}</td>
                   </tr>
-                  <tr>
-                    <td>Strength</td>
-                    <td>
-                      <div class="indicator-bar">
-                        {% assign strength = block.settings.strength | plus: 0 %}
-                        {% for i in (1..strength) %}
-                          {% render 'icon-bean-filled' %}
-                        {% endfor %}
-                        {% for i in (strength..4) %}
-                          {% render 'icon-bean-empty' %}
-                        {% endfor %}
-                      </div>
-                    </td>
-                  </tr>
+                  {% if block.settings.strength != blank %}
+                    <tr>
+                      <td>Strength</td>
+                      <td>
+                        <div class="indicator-bar">
+                          {% assign strength = block.settings.strength | plus: 0 %}
+                          {% render 'progress-bar-indicator', level: strength %}
+                        </div>
+                      </td>
+                    </tr>
+                  {% endif %}
+                  {% if block.settings.acidity != blank %}
                   <tr>
                     <td>Acidity</td>
                     <td>
                       <div class="indicator-bar">
                         {% assign acidity = block.settings.acidity | plus: 0 %}
-                        {% for i in (1..acidity) %}
-                          {% render 'icon-bean-filled' %}
-                        {% endfor %}
-                        {% for i in (acidity..4) %}
-                          {% render 'icon-bean-empty' %}
-                        {% endfor %}
+                        {% render 'progress-bar-indicator', level: acidity %}
                       </div>
                     </td>
                   </tr>
+                  {% endif %}
                   <tr>
                     <td>Type</td>
                     <td>{{ block.settings.type }}</td>

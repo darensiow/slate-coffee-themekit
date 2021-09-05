@@ -65,8 +65,8 @@
             "taste": "{{ product.metafields.my_fields.coffee_taste.value }}",
             "type": "{{ product.metafields.my_fields.bean_type.value }}",
             "origin": "{{ product.metafields.my_fields.coffee_origin.value }}",
-            "strength": 4,
-            "acidity": 2
+            "strength": "{{ product.metafields.my_fields.coffee_strength.value }}",
+            "acidity": "{{ product.metafields.my_fields.coffee_acidity.value }}"
           }
         }
       },
