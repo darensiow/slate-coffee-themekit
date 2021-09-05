@@ -124,7 +124,7 @@
                 <div class="summary__title">
                   {% render 'icon-accordion', icon: "leaf" %}
                   <h2 class="h4 accordion__title">
-                    Coffee Info
+                    {{ block.settings.heading | default: block.settings.page.title }}
                   </h2>
                 </div>
                 {% render 'icon-caret' %}
@@ -133,17 +133,19 @@
                 <table class="coffee-info">
                   <tr>
                     <td>Taste</td>
-                    <td>Hazelnut, Sweet Fruits</td>
+                    <td>{{ block.settings.taste }}</td>
                   </tr>
                   <tr>
                     <td>Strength</td>
                     <td>
                       <div class="indicator-bar">
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-empty' %}
+                        {% assign strength = block.settings.strength | plus: 0 %}
+                        {% for i in (1..strength) %}
+                          {% render 'icon-bean-filled' %}
+                        {% endfor %}
+                        {% for i in (strength..4) %}
+                          {% render 'icon-bean-empty' %}
+                        {% endfor %}
                       </div>
                     </td>
                   </tr>
@@ -151,21 +153,23 @@
                     <td>Acidity</td>
                     <td>
                       <div class="indicator-bar">
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-filled' %}
-                        {% render 'icon-bean-empty' %}
-                        {% render 'icon-bean-empty' %}
+                        {% assign acidity = block.settings.acidity | plus: 0 %}
+                        {% for i in (1..acidity) %}
+                          {% render 'icon-bean-filled' %}
+                        {% endfor %}
+                        {% for i in (acidity..4) %}
+                          {% render 'icon-bean-empty' %}
+                        {% endfor %}
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>Type</td>
-                    <td>100% Arabica, Single Origin</td>
+                    <td>{{ block.settings.type }}</td>
                   </tr>
                   <tr>
                     <td>Origin</td>
-                    <td>Ethiopia</td>
+                    <td>{{ block.settings.origin }}</td>
                   </tr>
                 </table>
               </div>
@@ -639,7 +643,43 @@
     {
       "type": "coffee_info",
       "name": "Coffee Info",
-      "settings": []
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Coffee Info",
+          "info": "Input the heading for coffee info",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "taste",
+          "default": "List tastes here",
+          "label": "Enter the taste information"
+        },
+        {
+          "type": "text",
+          "id": "type",
+          "default": "List bean's type here",
+          "label": "Enter the bean's type information"
+        },
+        {
+          "type": "text",
+          "id": "origin",
+          "default": "List origin here",
+          "label": "Enter the bean's origin information"
+        },
+        {
+          "type": "text",
+          "id": "strength",
+          "label": "Enter coffee strength"
+        },
+        {
+          "type": "text",
+          "id": "acidity",
+          "label": "Enter coffee acidity"
+        }
+      ]
     },
     {
       "type": "collapsible_tab",

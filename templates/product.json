@@ -57,6 +57,17 @@
             "page": "",
             "icon": "truck"
           }
+        },
+        "b2a8907e-6bf5-4033-898b-f85d410210ee": {
+          "type": "coffee_info",
+          "settings": {
+            "heading": "Coffee Info",
+            "taste": "{{ product.metafields.my_fields.coffee_taste.value }}",
+            "type": "{{ product.metafields.my_fields.bean_type.value }}",
+            "origin": "{{ product.metafields.my_fields.coffee_origin.value }}",
+            "strength": 4,
+            "acidity": 2
+          }
         }
       },
       "block_order": [
@@ -69,7 +80,8 @@
         "buy_buttons",
         "description",
         "share",
-        "dd9d5a86-9e3a-4749-9629-04eeb03cdc9b"
+        "dd9d5a86-9e3a-4749-9629-04eeb03cdc9b",
+        "b2a8907e-6bf5-4033-898b-f85d410210ee"
       ],
       "settings": {
         "enable_sticky_info": true,
